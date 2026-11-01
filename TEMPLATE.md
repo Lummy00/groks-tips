@@ -34,9 +34,21 @@ Open the copy and replace the bracketed placeholders.
 - Tables: **7 columns maximum**. Cells wrap so the table stays on a phone without sideways scrolling. Use the classes already in the template (`standings`, `poll`, `slate slate-nfl`, `slate slate-cfb`, `injuries injuries-weather`, `injuries injuries-report`, `fpi`). For some other table, use `class="data"` and a `<colgroup>` with one `<col>` per column, up to seven.
 - Plays: one `.pick` block each. Keep Bet, Stake, and Kickoff, then the write-up, then a `.risk` paragraph.
 - Sources: a `.src` list. Each item is a real link, then a `<span class="m">` with the publication name.
-- `.tracker`: the graded-picks line for NBA, NFL, and CFB.
 
-Copy lines, odds, totals, records, and units as you have them. Do not invent figures. Do not add fonts, scripts, images from a CDN, analytics, or other trackers.
+Copy lines, odds, totals, records, and units as you have them. Do not invent figures. Do not add fonts, images from a CDN, analytics, or other third-party scripts. Leave the shared tracker markup in place (see below).
+
+## Graded-picks tracker
+
+The record is stored only in `assets/tracker.js`. Each page, including the homepage, has an element the script fills in:
+
+```html
+<p class="tracker" data-tracker>Tracker (graded picks)</p>
+<script src="../assets/tracker.js" defer></script>
+```
+
+That plain text is the no-JavaScript fallback. With JavaScript, every `[data-tracker]` element shows the same line: each sport, its wins-losses, and its net units with a sign and two decimals, in the order NBA, NFL, CFB.
+
+Do not type a record into a write-up. To change the numbers, edit `assets/tracker.js` only. A page in the site root uses `src="assets/tracker.js"`. A page one folder down, which is every write-up, uses `src="../assets/tracker.js"`. The template already includes the second path.
 
 ## 3. Link it from the homepage
 
