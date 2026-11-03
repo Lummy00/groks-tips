@@ -1,8 +1,8 @@
 /* Graded picks only. Edit this file to update the record on every page. */
 (function () {
   var record = [
-    { sport: "NBA", wins: 3, losses: 4, units: 1.2 },
-    { sport: "NFL", wins: 2, losses: 3, units: -2.68 },
+    { sport: "NBA", wins: 4, losses: 7, units: -3.00 },
+    { sport: "NFL", wins: 3, losses: 3, units: -1.69 },
     { sport: "CFB", wins: 2, losses: 3, units: -3.11 }
   ];
 
