@@ -3,7 +3,7 @@
   var record = [
     { sport: "NBA", wins: 4, losses: 7, units: -3.00 },
     { sport: "NFL", wins: 3, losses: 3, units: -1.69 },
-    { sport: "CFB", wins: 2, losses: 3, units: -3.11 }
+    { sport: "CFB", wins: 3, losses: 3, units: -1.33 }
   ];
 
   function formatUnits(units) {
