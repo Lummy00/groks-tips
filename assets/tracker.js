@@ -1,12 +1,12 @@
 /* Graded picks only. Edit this file to update the record on every page. */
 (function () {
   var record = [
-    { sport: "NBA", wins: 8, losses: 11, units: -2.46 },
+    { sport: "NBA", wins: 8, losses: 12, units: -3.46 },
     { sport: "NFL", wins: 3, losses: 3, units: -1.69 },
-    { sport: "CFB", wins: 3, losses: 6, units: -5.33 }
+    { sport: "CFB", wins: 5, losses: 8, units: -5.55 }
   ];
 
-  var overall = { wins: 14, losses: 20, units: -9.48, roi: -16.1 };
+  var overall = { wins: 16, losses: 23, units: -10.70, roi: -16.7, staked: 64 };
 
   function formatUnits(units) {
     var text = units.toFixed(2);
@@ -24,7 +24,7 @@
 
   var line = "Tracker (graded picks): " + record.map(function (row) {
     return row.sport + " " + row.wins + "-" + row.losses + ", " + formatUnits(row.units) + "U";
-  }).join(" · ") + " · All sports " + overall.wins + "-" + overall.losses + ", " + formatUnits(overall.units) + "U, ROI " + formatRoi(overall.roi);
+  }).join(" · ") + " · All sports " + overall.wins + "-" + overall.losses + ", " + formatUnits(overall.units) + "U, ROI " + formatRoi(overall.roi) + ", " + overall.staked + "U staked";
 
   var nodes = document.querySelectorAll("[data-tracker]");
   for (var i = 0; i < nodes.length; i++) {
